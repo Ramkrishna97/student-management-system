@@ -1,5 +1,23 @@
+Manage student records — student id , name,age,email,and course.You can create,read,update,
+and delete student records.
+
+checks-
+min age should be 5 , max age school allow is 19
+email should not be used before non-duplicate email allowed for new student.
 
 
 
  ................................................
- swagger -  http://localhost:8001/swagger-ui/index.html
+ swagger -
+ http://localhost:8002/swagger-ui/index.html
+ ................................................
+ APIs -
+http://localhost:8002/students
+  ................................................
+  sample data :-
+  {
+    "name": "Sample Task 1",
+    "age": 32,
+    "course": "science",
+    "email":"abc.@gmail.com"
+  }
