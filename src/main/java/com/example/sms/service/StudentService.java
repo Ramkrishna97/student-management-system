@@ -35,5 +35,19 @@ public class StudentService {
     public void deleteAll(){
         repo.deleteAll();
     }
+    public String updateById(long id, Student student){
+        if(repo.findById(id).isPresent()){
+            Student existingStudent=repo.findById(id).get();
+            existingStudent.setName(student.getName());
+            existingStudent.setAge(student.getAge());
+            existingStudent.setCourse(student.getCourse());
+            existingStudent.setEmail(student.getEmail());
+            repo.save(existingStudent);
+            return "Student with id "+id+" updated successfully.";
+        }
+        else{
+            return "Student with id "+id+" not found.";
+        }
+    }
 
 }
